@@ -1,0 +1,7 @@
+{%- if page.rel == "contact" -%}
+    {%- include schema-contact.json -%}
+{%- endif -%}
+{%- if page.rel == "about" -%}
+    {%- include schema-about.json -%}
+{%- endif -%}
+

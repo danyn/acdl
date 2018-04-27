@@ -1,0 +1,83 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# https://developers.facebook.com/docs/internationalization#locales
+# OG image is 1200 pixels x 627 pixels (1.91/1 ratio) -> don’t exceed the 5MB size limit.
+#variables
+#repository is required/helps github-pages gem it's a good idea to include
+# need to call api to find it from list of repos
+source: src
+repository: 130800110
+repository_url: https://github.com/danyn/cdl
+country: CA
+lang: en
+title: Creative Dental Labs Specializes in Crowns and Bridges
+description: We provide fast turnarounds on diagnostic wax-ups
+company_name: Creative Dental Laboratory
+company_nickname: Creative Dental Labs
+social_image: assets/share_site.jpg
+email: your-email@example.com
+tel: (250) 595-1314
+baseurl: /cdl
+url: https://danyn.github.io
+author: Daniel Eisen
+twitter: true
+twitter_username: twitterMan
+github_username: daniel-eisen
+facebook:
+  admins: 3333
+  app_id: 1111
+  publisher: 2222
+  locale: en_CA 
+webmaster_verifications:
+  google: 938475394875
+  bing: ""
+  alexa: ""
+  yandex: ""
+  baidu: ""
+
+
+#schema.org settings which can also be used to reference these values in the site markup
+
+schema_org:
+  type: MedicalBusiness
+  city: Victoria
+  province: BC
+  postalCode: V8R 1J5
+  streetAddress: 1780 Fort Street Victoria
+
+
+# Build settings
+
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+#   - Gemfile
+#   - Gemfile.lock
+  - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# added while trying to fix a auth problem related to gh-pages gem I don't know what this does
+github: [metadata]

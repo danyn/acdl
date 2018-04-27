@@ -1,0 +1,23 @@
+{
+  "name": "creative_dental",
+  "version": "1.0.0",
+  "description": "a website built with jekyll and AMPS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danyn/cdl.git"
+  },
+  "author": "Daniel Eisen",
+  "license": "Dual License",
+  "bugs": {
+    "url": "https://github.com/danyn/cdl/issues"
+  },
+  "homepage": "https://github.com/danyn/cdl#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
