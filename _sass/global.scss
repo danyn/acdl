@@ -1,0 +1,22 @@
+
+
+// global typography
+// style links 
+    // think of link states as sets 
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+#{$a-tags} {
+    color: rgb(36, 40, 43);
+    text-decoration: none;
+  }
+#{$a-tags-hover} {
+    text-decoration: underline;
+  }
+
+// layout
+    // header
+.logo-width{
+    max-width: 400px;
+    width:60%;
+}
