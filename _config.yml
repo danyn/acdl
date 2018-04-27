@@ -19,9 +19,11 @@
 #variables
 #repository is required/helps github-pages gem it's a good idea to include
 # need to call api to find it from list of repos
-source: src
-repository: 131313937
+repository: 131319356
 repository_url: https://danyn.github.io/cdl_1.0.0/
+source: src
+url: https://danyn.github.io
+baseurl: /cdl_1.0.0
 country: CA
 lang: en
 title: Creative Dental Labs Specializes in Crowns and Bridges
@@ -31,8 +33,6 @@ company_nickname: Creative Dental Labs
 social_image: assets/share_site.jpg
 email: your-email@example.com
 tel: (250) 595-1314
-baseurl: /cdl_1.0.0
-url: https://danyn.github.io
 author: Daniel Eisen
 twitter: true
 twitter_username: twitterMan
