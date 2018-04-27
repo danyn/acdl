@@ -21,7 +21,6 @@
 # need to call api to find it from list of repos
 repository: 131325519
 repository_url: https://github.com/danyn/acdl
-source: src
 url: https://danyn.github.io
 baseurl: /acdl
 country: CA
