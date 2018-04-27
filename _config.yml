@@ -19,7 +19,7 @@
 #variables
 #repository is required/helps github-pages gem it's a good idea to include
 # need to call api to find it from list of repos
-repository: 131319356
+repository: 131325519
 repository_url: https://github.com/danyn/acdl
 source: src
 url: https://danyn.github.io
