@@ -20,10 +20,10 @@
 #repository is required/helps github-pages gem it's a good idea to include
 # need to call api to find it from list of repos
 repository: 131319356
-repository_url: https://danyn.github.io/cdl_1.0.0/
+repository_url: https://github.com/danyn/acdl
 source: src
 url: https://danyn.github.io
-baseurl: /cdl_1.0.0
+baseurl: /acdl
 country: CA
 lang: en
 title: Creative Dental Labs Specializes in Crowns and Bridges
