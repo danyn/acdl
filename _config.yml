@@ -20,7 +20,7 @@
 #repository is required/helps github-pages gem it's a good idea to include
 # need to call api to find it from list of repos
 
-repository: 131329757
+repository: 131330126
 repository_url: https://github.com/danyn/acdl
 url: https://danyn.github.io
 baseurl: /acdl
