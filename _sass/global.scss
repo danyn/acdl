@@ -1,18 +1,48 @@
 
 
 // global typography
+
+body, a{
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
+    font-weight: 100;
+    color:rgb(83, 83, 83);
+}
+p{
+    font-weight: 300;
+   
+}
+h1, h2, h3, h4, h5, h6 {
+    // font-family:  Times, "Times New Roman", Georgia, serif;
+    font-weight: 400;
+    color:rgb(46, 46, 46);
+  }
+
+code, pre {
+    font-family: "courier new", Courier, monospace;
+}
 // style links 
     // think of link states as sets 
 $a-tags: 'a, a:active, a:hover, a:visited';
 $a-tags-hover: 'a:active, a:hover';
 
 #{$a-tags} {
-    color: rgb(36, 40, 43);
     text-decoration: none;
+    color:rgb(107, 107, 107);
   }
 #{$a-tags-hover} {
-    text-decoration: underline;
+    color:rgb(48, 48, 48);
   }
+
+
+// color schemes
+
+.light-border{
+    border-color: rgb(241, 241, 241);
+}
+.light-background{
+    background-color: rgb(250, 250, 250);
+}
+
 
 // layout
     // header

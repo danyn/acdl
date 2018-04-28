@@ -15,12 +15,12 @@
     </a>
  
     {%- if page_paths -%}
-      <nav class="clearfix white bg-black">
-        <div class="sm-col">
+      <nav id="menu">
+        <div class="center py2 light-border light-background border-top border-bottom">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="btn py2 px2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            <a class="btn py2 px2 border-light" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>

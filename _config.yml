@@ -21,7 +21,7 @@
 # need to call api to find it from list of repos
 
 repository: 131331861
-repository_url: https://github.com/danyn/ccdl
+repository_url: https://github.com/danyn/acdl
 url: https://danyn.github.io
 baseurl: /acdl
 country: CA
