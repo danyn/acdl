@@ -1,0 +1,223 @@
+// classlist: [ 
+//             .ampstart-headerbar,
+//             .ampstart-navbar-trigger,
+//             .ampstart-headerbar-nav,
+//             .ampstart-nav,
+//             .ampstart-nav-item,
+//             .ampstart-dropdown,
+//             .ampstart-nav-dropdown,
+//             .ampstart-dropdown-items,
+//             .ampstart-dropdown-item,
+//             .ampstart-sidebar,
+//             .ampstart-sidebar-header,
+//             .ampstart-sidebar-nav,
+//             .ampstart-label ,
+//             .ampstart-social-follow,
+//             .ampstart-sidebar-faq,
+//             .ampstart-faq-item
+
+// ];
+
+// .ampstart-headerbar 
+
+.ampstart-headerbar {
+    background-color: #fff;
+    color: #000;
+    z-index: 999;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1)
+}
+
+.ampstart-headerbar+:not(amp-sidebar),
+.ampstart-headerbar+amp-sidebar+* {
+    margin-top: 3.5rem
+}
+
+.ampstart-headerbar .ampstart-nav-search:active,
+.ampstart-headerbar .ampstart-nav-search:focus,
+.ampstart-headerbar .ampstart-nav-search:hover {
+    box-shadow: none
+}
+
+// .ampstart-navbar-trigger
+
+.ampstart-navbar-trigger:focus {
+    outline: none
+}
+
+.ampstart-nav a,
+.ampstart-navbar-trigger,
+.ampstart-sidebar-faq a {
+    cursor: pointer;
+    text-decoration: none
+}
+
+.ampstart-navbar-trigger {
+    line-height: 3.5rem;
+    font-size: 2rem
+}
+
+.ampstart-sidebar .ampstart-navbar-trigger {
+    line-height: inherit
+}
+
+.ampstart-navbar-trigger svg {
+    pointer-events: none
+}
+
+// .ampstart-headerbar-nav
+
+.ampstart-headerbar-nav .ampstart-nav-item {
+    padding: 0 1.5rem;
+    background: transparent;
+    opacity: .8
+}
+
+.ampstart-headerbar-nav {
+    line-height: 3.5rem
+}
+
+.ampstart-headerbar-nav {
+    -ms-flex: 1;
+    flex: 1
+}
+
+// align the nav defaults to center
+// .ampstart-headerbar-nav>ul {
+//     -ms-flex-pack: end;
+//     justify-content: flex-end
+// }
+
+.ampstart-headerbar-nav .ampstart-nav-item {
+    padding-right: 1rem
+}
+
+.ampstart-headerbar-nav .ampstart-nav-item a {
+    font-size: .875rem
+}
+
+
+// .ampstart-nav
+
+.ampstart-nav .ampstart-label {
+    color: inherit
+}
+
+// .ampstart-nav-item // .ampstart-dropdown 
+
+.ampstart-headerbar-nav .ampstart-nav-item {
+    padding: 0 1.5rem;
+    background: transparent;
+    opacity: .8
+}
+
+.ampstart-nav-item:active,
+.ampstart-nav-item:focus,
+.ampstart-nav-item:hover {
+    opacity: 1
+}
+
+.ampstart-sidebar .ampstart-dropdown-item,
+.ampstart-sidebar .ampstart-dropdown header,
+.ampstart-sidebar .ampstart-faq-item,
+.ampstart-sidebar .ampstart-nav-item,
+.ampstart-sidebar .ampstart-social-follow {
+    margin: 0 0 2.5rem
+}
+
+// .ampstart-nav-dropdown
+
+.ampstart-sidebar .ampstart-nav-dropdown {
+    margin: 0
+}
+
+.ampstart-nav-dropdown {
+    min-width: 200px
+}
+
+
+.ampstart-nav-dropdown amp-accordion header {
+    background-color: #fff;
+    border: none
+}
+
+.ampstart-nav-dropdown amp-accordion ul {
+    background-color: #fff
+}
+
+.ampstart-nav-dropdown .ampstart-dropdown-item,
+.ampstart-nav-dropdown .ampstart-dropdown>section>header {
+    background-color: #fff;
+    color: #000
+}
+
+.ampstart-nav-dropdown .ampstart-dropdown-item {
+    color: #003f93
+}
+
+
+// .ampstart-dropdown-items
+
+// .ampstart-dropdown-item
+
+// .ampstart-sidebar
+
+.ampstart-sidebar {
+    background-color: #fff;
+    color: #000;
+    min-width: 300px;
+    width: 300px
+}
+
+.ampstart-sidebar .ampstart-icon {
+    fill: #003f93
+}
+
+
+// ampstart-sidebar-header
+
+.ampstart-sidebar-header {
+    line-height: 3.5rem;
+    min-height: 3.5rem
+}
+
+// ampstart-sidebar-nav
+
+//  ampstart-label
+
+// seems scoped for the footer
+// .ampstart-footer-nav .ampstart-label {
+//     font-size: .875rem;
+//     letter-spacing: normal
+// }
+
+.ampstart-byline,
+.ampstart-caption,
+.ampstart-hint,
+.ampstart-label {
+    font-size: .875rem;
+    color: #4f4f4f;
+    line-height: 1.125rem;
+    letter-spacing: .06rem
+}
+
+.ampstart-label {
+    text-transform: uppercase
+}
+
+
+// ampstart-social-follow
+
+// .ampstart-footer .ampstart-social-follow {
+//     -ms-flex-pack: start;
+//     justify-content: flex-start;
+//     width: 100%;
+//     margin-bottom: calc(5rem - 1rem)
+// }
+
+// .ampstart-footer .ampstart-social-follow li:last-child {
+//     margin-right: 0
+// }
+
+// ampstart-sidebar-faq
+
+
