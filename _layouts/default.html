@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html ⚡ lang="{{ page.lang | default: site.lang | default: "en" }}">
-{%- include head.html -%}
+
   <body>
 
-    {%- include header.html -%}
-
+    {%- if site.nav and !page.nav -%}
+      {%- include {{site.nav}} -%}
+    {%- elsif page.nav -%}
+      {%- include {{page.nav}}  -%}
+    {%- else -%}  
+      {%- include head.html -%}
+    {%- endif -%}
+    
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
