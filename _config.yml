@@ -80,6 +80,10 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+  - pages/about/about.scss
+  - pages/contact/contact.scss
+  - pages/restorations/restorations.scss
+  
 
 # added while trying to fix a auth problem related to gh-pages gem I don't know what this does
-github: [metadata]
+# github: [metadata]
