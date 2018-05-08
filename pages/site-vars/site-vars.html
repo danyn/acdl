@@ -8,3 +8,21 @@ schema: debug
 
 
 <h2>Variables</h2>
+
+<h3>Navigation variables</h3>
+
+<pre>
+{{site.data.navigation}} 
+</pre>
+
+{% for element in site.data.navigation.menu %}
+    {% if element.dropdown  %} 
+       <h2> {{ element.dropdown }} </h2>
+       <ul>
+    {% for dropdownItem in element.dropdownItems %}
+       <li> <a href="{{site.url}}{{site.baseurl}}{{ dropdownItem.linkUrl }}">  {{ dropdownItem.linkText }} </a>  </li>
+      {% endfor %} 
+    </ul>
+    {% endif %} 
+
+{% endfor %}    
