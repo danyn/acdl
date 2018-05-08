@@ -20,9 +20,11 @@ schema: debug
        <h2> {{ element.dropdown }} </h2>
        <ul>
     {% for dropdownItem in element.dropdownItems %}
-       <li> <a href="{{site.url}}{{site.baseurl}}{{ dropdownItem.linkUrl }}">  {{ dropdownItem.linkText }} </a>  </li>
+       <li> <a href="{{ site.url }}{{ site.baseurl }}{{ dropdownItem.linkUrl }}">  {{ dropdownItem.linkText }} </a>  </li>
       {% endfor %} 
     </ul>
+    {% else %}
+    <li> <a href="{{ site.url }}{{ site.baseurl }}{{ element.linkUrl }}"> {{element.linkText}} </a> </li>
     {% endif %} 
 
 {% endfor %}    
