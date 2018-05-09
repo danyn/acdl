@@ -39,11 +39,22 @@ author: Daniel Eisen
 twitter: true
 twitter_username: twitterMan
 github_username: daniel-eisen
+
+# Explicitly say which pages to include in the nav
+header_pages:
+  - pages/about/about.md
+  - pages/contact/contact.html
+  - pages/restorations/restorations.html
+  - pages/site-vars/site-vars.html
+
+
+# Information for facebook pixil and marketing functions
 facebook:
   admins: 3333
   app_id: 1111
   publisher: 2222
   locale: en_CA 
+# Information for website verification codes often written into the the document head
 webmaster_verifications:
   google: 938475394875
   bing: ""
@@ -52,8 +63,8 @@ webmaster_verifications:
   baidu: ""
 
 
-#schema.org settings which can also be used to reference these values in the site markup
 
+#schema.org settings which can also be used to reference these values in the site markup and rich snippets
 schema_org:
   type: MedicalBusiness
   city: Victoria

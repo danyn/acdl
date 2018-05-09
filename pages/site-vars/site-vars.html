@@ -15,7 +15,7 @@ pre{
 </style>
 <h2>Variables</h2>
 
-<h3>Navigation variables</h3>
+<h3>Navigation variables from a yaml file explicitly stated</h3>
 
 <pre>
 {{site.data.navigation}} 
@@ -43,11 +43,11 @@ pre{
 </div>
 
 {%- assign page_paths = site.header_pages | default: default_paths -%}
-
+!!!!!!!!!!!!!!!<br>
 <div>
-    <p>page_paths: </p>  <p>{{ page_paths }}</p>
+    <p>page_paths (site.pages | map : "path or site.header_pages"): </p>  <p>{{ page_paths }}</p>
 </div>
-
+!!!!!!!!!!!!!!!<br>
 {%- for path in page_paths -%}
 <p>PATH: {{path}}</p>
 {%- endfor -%}
@@ -57,6 +57,7 @@ pre{
 {%- assign my_page = site.pages | where: "path", path | first -%}
 <hr>
 {% highlight json %}
+<p>assign my_page = site.pages | where: "path", path | first </p>
 PATH my page: {{my_page }}
 Path my_page.url: {{ my_page.url  }}
 Path my_page.url | relative_url: {{ my_page.url | relative_url }}
