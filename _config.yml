@@ -46,6 +46,10 @@ header_pages:
   - pages/about/about.md
   - pages/contact/contact.html
   - pages/restorations/restorations.html
+  - dropdown: Topics
+    dropdownItems:
+      - pages/topics/topic-1/index.html
+      - pages/topics/topic-2/index.html
  
 
 
