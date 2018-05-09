@@ -42,10 +42,11 @@ github_username: daniel-eisen
 
 # Explicitly say which pages to include in the nav
 header_pages:
+  - pages/site-vars/site-vars.html
   - pages/about/about.md
   - pages/contact/contact.html
   - pages/restorations/restorations.html
-  - pages/site-vars/site-vars.html
+ 
 
 
 # Information for facebook pixil and marketing functions
