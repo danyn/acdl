@@ -29,7 +29,7 @@
                     {%- if my_page.in_page_nav -%}
                       {% assign page_navs = my_page.in_page_nav| split: ', ' %}
                       <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
-                          <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown absolute top-0 left-0 right-0 bottom-0">
+                          <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown absolute top-0 left-0 right-0 bottom-0" id="d1">
                               <section>
                                 <header>{{ my_page.title | escape }}</header>
                                 <ul class="ampstart-dropdown-items list-reset m0 p0">
