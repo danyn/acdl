@@ -6,8 +6,10 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
   return gulp.src('./_sass/*.scss')
       .pipe(sass({
-          outputStyle: 'compressed'
-
+          outputStyle: 'compressed',
+          includePaths: [
+            './_sass'
+        ]
       }))
       .pipe(gulp.dest('./_includes/css'));
 });

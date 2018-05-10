@@ -1,25 +1,55 @@
 // home page css declare as css in front matter to incude:
-// _includes/css/home/home.css 
+// _includes/css/home/home.css
+@import "vars"; 
 .home-above-fold{
-    max-height: 500px;
-    overflow: hidden;
     .value-statement{
-        top: 53px;
-        max-width: 518px;
-        width: 40%;
-        left: 57%;
+        font-size:1.3em;
+        #homeHeroImage{
+            max-height: 500px;
+            overflow: hidden;
+        }
         h1{
+            font-size:1.4em;
             font-weight: 200;
+            color:inherit;
         }
         p{
-            font-size:  1.3em;
+            font-size:  1em;
             font-weight: 100;
         }
 
         // media queries
-        @media (min-width:1400px){
-            top: 127px;
+        @media (max-width: 760px){
+            
+            background-color: $light_blue;
+            color: white;
+            padding:30px;//also fixes a margin esaping somewhere
         }    
-    }// .value-statement
 
+        @media(min-width: 761px){
+            position:absolute;
+            top:20px;
+            max-width: 518px;
+            width: 40%;
+            left: 57%;
+        }
+        @media(min-width: 837px){
+            
+        }
+
+        @media (min-width: 1025px){
+            top: 127px;
+        }  
+        
+        @media (min-width: 1300px){
+            font-size: 1.7em;
+        }   
+
+    }// .value-statement
+ @media(min-width: 760px){
+ 
+ 
+ }
 }// .home-above-fold
+
+// 504px is when a larger image displays
