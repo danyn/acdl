@@ -1,0 +1,25 @@
+// home page css declare as css in front matter to incude:
+// _includes/css/home/home.css 
+.home-above-fold{
+    max-height: 500px;
+    overflow: hidden;
+    .value-statement{
+        top: 53px;
+        max-width: 518px;
+        width: 40%;
+        left: 57%;
+        h1{
+            font-weight: 200;
+        }
+        p{
+            font-size:  1.3em;
+            font-weight: 100;
+        }
+
+        // media queries
+        @media (min-width:1400px){
+            top: 127px;
+        }    
+    }// .value-statement
+
+}// .home-above-fold

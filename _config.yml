@@ -79,7 +79,7 @@ schema_org:
 
 
 # Build settings
-debug: yes
+debug: no
 markdown: kramdown
 # theme: minima
 plugins:

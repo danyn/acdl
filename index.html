@@ -1,30 +1,37 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
+css: home/home.css
 ---
+<div class="home-above-fold relative">
+  <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
+    media="(min-width: 1500px)"
+    width="1500"
+    height="720"
+    layout="responsive"
+    src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-desktop.jpg"
+  >
+  </amp-img>
+  <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
+    media="(min-width: 504px) and (max-width: 1499px)"
+    width="1280"
+    height="719"
+    layout="responsive"
+    src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-tablet.jpg"
+  >
+  </amp-img>
+  <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
+    media="(max-width: 504px)"
+    width="420"
+    height="497"
+    layout="responsive"
+    src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-mobile.jpg"
+  >
+  </amp-img>
 
-<amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-  media="(min-width: 1500px)"
-  width="1500"
-  height="720"
-  src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-desktop.jpg"
->
-</amp-img>
-<amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-  media="(min-width: 504px) and (max-width: 1499px)"
-  width="1280"
-  height="719"
-  src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-tablet.jpg"
->
-</amp-img>
-<amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-  media="(max-width: 504px)"
-  width="420"
-  height="497"
-  src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-mobile.jpg"
->
-</amp-img>
+  <div class="value-statement absolute" id="homeValueStatement">
+  <h1>CREATIVE DENTAL LAB</h1>
 
-<!-- {{site.url}}{{site.baseurl}} -->
+  <p>Creative Dental Lab has been located in Victoria BC since 1976.  Specializing in crown and bridge restoration – we provide fast turnaround on diagnostic wax-ups. For your next restoration please call  (250) 595-1314</p>
+
+  </div><!-- .value-statement -->
+</div><!-- .home-above-fold -->
