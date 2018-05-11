@@ -34,7 +34,8 @@ nav: navs/nav-default.html
 logo: /assets/logo.png
 social_image: assets/share_site.jpg
 email: your-email@example.com
-tel: (250) 595-1314
+tel_pretty: (250) 595-1314
+tel: 2505951314
 author: Daniel Eisen
 twitter: true
 twitter_username: twitterMan
