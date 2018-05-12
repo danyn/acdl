@@ -1,7 +1,7 @@
 // global
 
 // global layout
-
+*, *:before, *:after{box-sizing: border-box;}
 .post-content, footer{
     max-width:1500px;
     margin: 0 auto;

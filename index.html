@@ -1,67 +1,71 @@
----
+--- 
 layout: page
 page_css_class: home-page
 css: home/home.css
 component_css: buttons/telephone/button-telephone.css
 ---
 <div class="home-above-fold relative">
-  <div id="homeHeroImage">
-    <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-      media="(min-width: 1281px)"
-      width="1500"
-      height="720"
-      layout="responsive"
-      src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-desktop.jpg"
-    >
-    </amp-img>
-    <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-      media="(min-width: 505px) and (max-width: 1280px)"
-      width="1280"
-      height="719"
-      layout="responsive"
-      src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-tablet.jpg"
-    >
-    </amp-img>
-    <amp-img alt="Creative Dental Labs - We help dentists make great smiles"
-      media="(max-width: 504px)"
-      width="420"
-      height="497"
-      layout="responsive"
-      src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-mobile.jpg"
-    >
-    </amp-img>
-  </div><!-- home-hero-image -->
+	<div id="homeHeroImage">
+		<amp-img alt="Creative Dental Labs - We help dentists make great smiles" media="(min-width: 1281px)" width="1500" height="720"
+			layout="responsive" src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-desktop.jpg">
+		</amp-img>
+		<amp-img alt="Creative Dental Labs - We help dentists make great smiles" media="(min-width: 505px) and (max-width: 1280px)"
+			width="1280" height="719" layout="responsive" src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-tablet.jpg">
+		</amp-img>
+		<amp-img alt="Creative Dental Labs - We help dentists make great smiles" media="(max-width: 504px)" width="420" height="497"
+			layout="responsive" src="{{site.url}}{{site.baseurl}}/pages/home/creative-dental-great-smiles-mobile.jpg">
+		</amp-img>
+	</div>
+	<!-- home-hero-image -->
 
-  <div class="value-statement" id="homeValueStatement">
-    <h1>CREATIVE DENTAL LAB</h1>
-    <p>Creative Dental Lab has been located in Victoria BC since 1976.  Specializing in crown and bridge restoration – we provide fast turnaround on diagnostic wax-ups. For your next restoration please call.</p>
-    {% include buttons/telephone/button-telephone.html %}
-  </div><!-- .value-statement -->
-</div><!-- .home-above-fold -->
+	<div class="value-statement" id="homeValueStatement">
+		<h1>CREATIVE DENTAL LAB</h1>
+		<p>Creative Dental Lab has been located in Victoria BC since 1976. Specializing in crown and bridge restoration – we provide
+			fast turnaround on diagnostic wax-ups. For your next restoration please call.</p>
+		{% include buttons/telephone/button-telephone.html %}
+	</div>
+	<!-- .value-statement -->
+</div>
+<!-- .home-above-fold -->
 
 
-<div class="md-flex" id="services">
-  <div class="md-col-4 p3" id="crowns">
-    <h2>PORCELAIN FUSED TO METAL CROWNS</h2>
-      <ul>
-        <li> Fabricated Using The Most Advanced Materials Available</li>
-        <li>In-lab turnaround time 5 working days </li>
-        <li>Longevity: 25 yrs </li>
-      </ul>
-  </div><!-- #crowns -->
-  <div class="md-col-4 p3" id="ceramic">
-      <h2>ALL CERAMIC AND FULL CAST</h2>
-      <ul>
-        <li>All ceramic restorations restore the natural beauty and strength of teeth</li>
-        <li>Full cast crowns and bridges offer a variety of options</li>
-        <li>Gold is still the preferred choice</li>
-      </ul>
-    </div><!-- #ceramic -->
-  <div class="md-col-4 p3" id="implants">
-    <h2>IMPLANTS</h2>
-    <ul>
-      <li>We provide accurate technical solutions for dental implants</li>
-      <li>We produce implant based crown &amp; bridge using Nobel Biocare and Straumann systems</li>     
-    </ul>
-  </div><!-- #implants -->
+<div class="flex-wrap" id="services">
+	<div class="p3" id="crowns">
+		<a href="{{site.url}}{{site.baseurl}}/restorations/#crowns" class="services-links clearfix">
+			<h2>PORCELAIN FUSED TO METAL CROWNS</h2>
+			<ul>
+				<li> Fabricated Using The Most Advanced Materials Available</li>
+				<li>In-lab turnaround time 5 working days </li>
+				<li>Longevity: 25 yrs </li>
+			</ul>
+		</a>
+	</div><!-- #crowns -->
+	<div class="p3" id="ceramic">
+		<a href="{{site.url}}{{site.baseurl}}/restorations/#ceramic" class="services-links clearfix">
+			<h2>ALL CERAMIC AND FULL CAST</h2>
+			<ul>
+				<li>All ceramic restorations restore the natural beauty and strength of teeth</li>
+				<li>Full cast crowns and bridges offer a variety of options</li>
+				<li>Gold is still the preferred choice</li>
+			</ul>
+		</a>
+	</div><!-- #ceramic -->
+	<div class="p3" id="implants">
+		<a href="{{site.url}}{{site.baseurl}}/restorations/#implants" class="services-links clearfix">
+			<h2>IMPLANTS</h2>
+			<ul>
+				<li>We provide accurate technical solutions for dental implants</li>
+				<li>Implant based crowns &amp; bridges are avialable</li>
+				<li>We use Nobel Biocare and Straumann systems</li>
+			</ul>
+		</a>
+	</div><!-- #implants -->
 </div><!-- #services -->
+
+<div id="closingStatement" class="p3">
+
+	<h3 class="center">LOVE YOUR SMILE AGAIN WITH DENTAL RESTORATION</h3>
+	<p>		
+		At Creative Dental in Victoria, we are a small dental laboratory that offers our patients a unique, comfortable dental experience. By specializing in crown and bridge restoration, we are able to offer exceptional quality and consistency not found in most large laboratories. We have become highly proficient in porcelain, veneer, implant, gold, e.max® and zirconia restorations.
+	</p>
+</div>

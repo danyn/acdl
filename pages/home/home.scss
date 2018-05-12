@@ -49,23 +49,45 @@
 
 .home-page{
 	#services{
-		max-width:1200px;
-		margin:0 auto;
+		@media(min-width:1200px){
+			max-width:1200px;
+			position:relative;
+			top:-20px;
+		}
 		
+		margin:0 auto;
+		@media(min-width:761px){
+			display:flex;
+		}
 		div{
 			color:white;
-			&:before{
-				content:'';
-				float:left;
-				padding-top:100%;
+			@media(min-width:1071px){
+				width:33%;
 			}
 		}
 		h2{
 			color:inherit;
+			font-weight:200;
+			font-size:1.1em;
+		}
+		a.services-links{
+			color:inherit;
+			display:block;
+			border:3px solid;
+			border-radius:3px;
+			padding: 1em;
+			@media(min-width:1071px){
+				&:before{
+					content:'';
+					float:left;
+					padding-top:80%;
+				}
+			}
 		}
 		ul{
 			list-style-type: none;
 			padding-left:1em;
+			margin-bottom:2em;
 			li{
 				position:relative;
 				margin:0;
@@ -79,12 +101,22 @@
 		}//ul
 		#crowns{
 			background-color: $dark_blue;
+			@media(min-width:761px)and(max-width:1070px){
+				width:50%;
+			}
 		}
 		#ceramic{
 			background-color: $logo_blue;
+			@media(min-width:761px)and(max-width:1070px){
+				width:50%;
+			}
 		}
 		#implants{
 			background-color: $light_blue;
+			@media(min-width:761px)and(max-width:1070px){
+				width:100%;
+
+			}
 		}
 	}//#services
 }//.home-page
