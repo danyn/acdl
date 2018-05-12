@@ -11,6 +11,7 @@
     background: $light_blue;
 
     a.tel-link{
+        
         color:inherit;
         font-size:inherit;
         .icon-tel{
@@ -23,7 +24,7 @@
             }
         }
         .phone-pretty{
-           
+            top: -10px;
             padding-top: 10px;
             padding-left: 26px;
             

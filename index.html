@@ -2,7 +2,7 @@
 layout: page
 page_css_class: home-page
 css: home/home.css
-component_css: buttons/button-telephone.css
+component_css: buttons/telephone/button-telephone.css
 ---
 <div class="home-above-fold relative">
   <div id="homeHeroImage">
@@ -35,6 +35,33 @@ component_css: buttons/button-telephone.css
   <div class="value-statement" id="homeValueStatement">
     <h1>CREATIVE DENTAL LAB</h1>
     <p>Creative Dental Lab has been located in Victoria BC since 1976.  Specializing in crown and bridge restoration – we provide fast turnaround on diagnostic wax-ups. For your next restoration please call.</p>
-    {% include buttons/button-telephone.html %}
+    {% include buttons/telephone/button-telephone.html %}
   </div><!-- .value-statement -->
 </div><!-- .home-above-fold -->
+
+
+<div class="md-flex" id="services">
+  <div class="md-col-4 p3" id="crowns">
+    <h2>PORCELAIN FUSED TO METAL CROWNS</h2>
+      <ul>
+        <li> Fabricated Using The Most Advanced Materials Available</li>
+        <li>In-lab turnaround time 5 working days </li>
+        <li>Longevity: 25 yrs </li>
+      </ul>
+  </div><!-- #crowns -->
+  <div class="md-col-4 p3" id="ceramic">
+      <h2>ALL CERAMIC AND FULL CAST</h2>
+      <ul>
+        <li>All ceramic restorations restore the natural beauty and strength of teeth</li>
+        <li>Full cast crowns and bridges offer a variety of options</li>
+        <li>Gold is still the preferred choice</li>
+      </ul>
+    </div><!-- #ceramic -->
+  <div class="md-col-4 p3" id="implants">
+    <h2>IMPLANTS</h2>
+    <ul>
+      <li>We provide accurate technical solutions for dental implants</li>
+      <li>We produce implant based crown &amp; bridge using Nobel Biocare and Straumann systems</li>     
+    </ul>
+  </div><!-- #implants -->
+</div><!-- #services -->
