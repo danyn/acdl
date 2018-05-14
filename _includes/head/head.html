@@ -4,17 +4,17 @@
   <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom>
-		{%- include css/normalize.css -%}
-    {%- include css/bass.css -%}
-    {%- include css/global.css -%}
-    {%- include css/navs/nav.css -%}
+		{%- include head/css/normalize.css -%}
+    {%- include head/css/bass.css -%}
+    {%- include head/css/global.css -%}
+    {%- include head/css/navs/nav.css -%}
     {%- if page.css -%}
         {%- include css/{{ page.css }} -%}
     {%- endif -%}
     {%- if page.component_css -%}
     {%- assign css_includes = page.component_css | split: ', ' -%}
       {%- for css_include in css_includes -%}
-        {%- include css/{{ css_include }} -%}
+        {%- include head/css/{{ css_include }} -%}
       {%- endfor -%}	
 		{%- endif -%}
   </style>
@@ -22,8 +22,13 @@
    <script async src="https://cdn.ampproject.org/v0.js"></script>
    <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
-  {%- include seo-group.html -%}
+  {%- include head/seo-group.html -%}
  <!-- feed meta -->
+{%- comment -%}
   {%- feed_meta -%}
- 
+{%- endcomment -%}
+
+   {%-if site.shortcut-icon -%}
+    <link rel="icon" type="image/x-icon" href="{{site.favicon}}" /> 
+   {%- endif -%}
 </head>

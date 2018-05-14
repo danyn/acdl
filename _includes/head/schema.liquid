@@ -1,0 +1,11 @@
+{% comment %}
+conditionally include a schemal if the page has a rel variable
+in the front matter
+{% endcomment %}
+{%- if page.rel == "contact" -%}
+    {%- include head/schema-contact.json -%}
+{%- endif -%}
+{%- if page.rel == "about" -%}
+    {%- include head/schema-about.json -%}
+{%- endif -%}
+
