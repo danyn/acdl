@@ -1,3 +1,4 @@
+@import "normalize";
 @import "type-scale";
 @import "typography";
 @import "layout";
@@ -9,3 +10,6 @@
 @import "position";
 @import "border";
 @import "hide";
+// addons
+@import "responsive-margin";
+@import "responsive-padding";

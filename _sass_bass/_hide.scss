@@ -12,7 +12,7 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 /* Basscss Hide */
 
 .hide {
-  position: absolute !important;
+  position: absolute  ;
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -20,19 +20,19 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 }
 
 @media #{$breakpoint-xs} {
-  .xs-hide { display: none !important }
+  .xs-hide { display: none   }
 }
 
 @media #{$breakpoint-sm-md} {
-  .sm-hide { display: none !important }
+  .sm-hide { display: none   }
 }
 
 @media #{$breakpoint-md-lg} {
-  .md-hide { display: none !important }
+  .md-hide { display: none   }
 }
 
 @media #{$breakpoint-lg} {
-  .lg-hide { display: none !important }
+  .lg-hide { display: none   }
 }
 
-.display-none { display: none !important }
+.display-none { display: none   }

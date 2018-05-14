@@ -1,7 +1,8 @@
 'use strict';
- 
+//  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var destination = './_includes/head/css';
 
 gulp.task('sass', function () {
   return gulp.src('./_sass/*.scss')
@@ -11,7 +12,18 @@ gulp.task('sass', function () {
             './_sass'
         ]
       }))
-      .pipe(gulp.dest('./_includes/css'));
+      .pipe(gulp.dest(destination));
+});
+
+gulp.task('sassBass', function () {
+  return gulp.src('./_sass_bass/*.scss')
+      .pipe(sass({
+          outputStyle: 'compressed',
+          includePaths: [
+            './_sass_bass'
+        ]
+      }))
+      .pipe(gulp.dest(destination));
 });
  
 gulp.task('sassPages', function () {
@@ -22,7 +34,7 @@ gulp.task('sassPages', function () {
             './_sass'
         ]
       }))
-      .pipe(gulp.dest('./_includes/css'));
+      .pipe(gulp.dest(destination));
 });
 
 gulp.task('sassComponents', function () {
@@ -33,17 +45,18 @@ gulp.task('sassComponents', function () {
             './_sass'
         ]
       }))
-      .pipe(gulp.dest('./_includes/css'));
+      .pipe(gulp.dest(destination));
 });
 
 
 gulp.task('watch', function(){
+  gulp.watch('./_sass_bass/*.scss', gulp.series('sassBass')); 
   gulp.watch('./_sass/*.scss', gulp.series('sass')); 
   gulp.watch('./pages/**/**/*.scss', gulp.series('sassPages')); 
   gulp.watch('./_includes/**/**/*.scss', gulp.series('sassComponents')); 
   
 });
 
-gulp.task('default', gulp.series('sass','sassPages' , 'sassComponents' , 'watch', function(){
+gulp.task('default', gulp.series('sassBass', 'sass', 'sassPages' , 'sassComponents' , 'watch', function(){
   console.log("running tasks");
 }));

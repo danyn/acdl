@@ -4,17 +4,16 @@
   <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom>
-		{%- include head/css/normalize.css -%}
-    {%- include head/css/bass.css -%}
+    {%- include head/css/basscss.css -%}
     {%- include head/css/global.css -%}
     {%- include head/css/navs/nav.css -%}
     {%- if page.css -%}
-        {%- include css/{{ page.css }} -%}
+        {%- include head/css/{{ page.css }} -%}
     {%- endif -%}
     {%- if page.component_css -%}
     {%- assign css_includes = page.component_css | split: ', ' -%}
       {%- for css_include in css_includes -%}
-        {%- include head/css/{{ css_include }} -%}
+        {%- include head/css/components/{{ css_include }} -%}
       {%- endfor -%}	
 		{%- endif -%}
   </style>
