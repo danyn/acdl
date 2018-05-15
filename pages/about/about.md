@@ -6,7 +6,7 @@ social_image: /about/share.jpg
 type: page
 schema: about
 css: about/about.css
-nav: navs/nav-sidebar.html
+# nav: navs/nav-sidebar.html
 ---
 
 

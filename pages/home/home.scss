@@ -20,11 +20,11 @@
 			font-weight: 100;
 		}
 
-		// media queries
+		// #region media queries for .value-statement
 		@media (max-width: 760px){   
 			background-color: $light_blue;
 			color: white;
-			padding:30px;//also fixes a margin esaping somewhere
+			padding:$space-3;
 		}    
 
 		@media(min-width: 761px){
@@ -42,6 +42,7 @@
 		@media (min-width: 1300px){
 			font-size: 1.7em;
 		}   
+	// #endregion 
 
 	}// .value-statement
 

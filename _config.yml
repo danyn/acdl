@@ -43,6 +43,7 @@ github_username: daniel-eisen
 
 # Explicitly say which pages to include in the nav
 header_pages:
+  - pages/layouts/index.html
   - pages/site-vars/site-vars.html
   - pages/about/about.md
   - pages/contact/contact.html
@@ -51,6 +52,8 @@ header_pages:
     dropdownItems:
       - pages/topics/topic-1/index.html
       - pages/topics/topic-2/index.html
+
+ 
  
 
 
@@ -90,9 +93,13 @@ plugins:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-#   - Gemfile
-#   - Gemfile.lock
+  - Gemfile
+  - Gemfile.lock
   - node_modules
+  - gulpfile.js
+  - package-lock.json
+  - package.json
+  - README.md
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
@@ -100,6 +107,7 @@ exclude:
   - pages/about/about.scss
   - pages/contact/contact.scss
   - pages/restorations/restorations.scss
+  - pages/home/home.scss
   
 
 # added while trying to fix a auth problem related to gh-pages gem I don't know what this does
