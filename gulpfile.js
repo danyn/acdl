@@ -15,12 +15,26 @@ gulp.task('sass', function () {
       .pipe(gulp.dest(destination));
 });
 
+
+
 gulp.task('sassBass', function () {
   return gulp.src('./_sass_bass/*.scss')
       .pipe(sass({
           outputStyle: 'compressed',
           includePaths: [
             './_sass_bass'
+        ]
+      }))
+      .pipe(gulp.dest(destination));
+});
+
+
+gulp.task('sassFooter', function () {
+  return gulp.src('./_includes/footer/*.scss')
+      .pipe(sass({
+          outputStyle: 'compressed',
+          includePaths: [
+            './_sass'
         ]
       }))
       .pipe(gulp.dest(destination));
@@ -51,12 +65,13 @@ gulp.task('sassComponents', function () {
 
 gulp.task('watch', function(){
   gulp.watch('./_sass_bass/*.scss', gulp.series('sassBass')); 
-  gulp.watch('./_sass/*.scss', gulp.series('sass')); 
+  gulp.watch('./_sass/*.scss', gulp.series('sass'));
+  gulp.watch('./_includes/footer/*.scss', gulp.series('sassFooter'));  
   gulp.watch('./pages/**/**/*.scss', gulp.series('sassPages')); 
   gulp.watch('./_includes/**/**/*.scss', gulp.series('sassComponents')); 
   
 });
 
-gulp.task('default', gulp.series('sassBass', 'sass', 'sassPages' , 'sassComponents' , 'watch', function(){
+gulp.task('default', gulp.series('sassBass', 'sass', 'sassFooter', 'sassPages' , 'sassComponents' , 'watch', function(){
   console.log("running tasks");
 }));
