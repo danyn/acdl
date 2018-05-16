@@ -1,1 +1,16 @@
+@import 'vars';
 // test layouts a css here
+
+.layouts{
+    .container{
+        border: 2px solid green;
+        .padding-container{
+            padding:$space-1;
+        }
+        .padding-box{
+            border: 2px solid;
+            padding: $space-1 $space-2 $space-1;
+            height: 100%
+        }
+    }
+}
