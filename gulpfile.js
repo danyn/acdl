@@ -3,6 +3,19 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var destination = './_includes/head/css';
+var  autoprefixer = require('gulp-autoprefixer');
+
+
+
+gulp.task('default', () =>
+    gulp.src('src/app.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist'))
+);
+
 
 gulp.task('sass', function () {
   return gulp.src('./_sass/*.scss')
@@ -12,6 +25,10 @@ gulp.task('sass', function () {
             './_sass'
         ]
       }))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
       .pipe(gulp.dest(destination));
 });
 
@@ -25,6 +42,10 @@ gulp.task('sassBass', function () {
             './_sass_bass'
         ]
       }))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
       .pipe(gulp.dest(destination));
 });
 
@@ -37,6 +58,10 @@ gulp.task('sassFooter', function () {
             './_sass'
         ]
       }))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
       .pipe(gulp.dest(destination));
 });
  
@@ -48,6 +73,10 @@ gulp.task('sassPages', function () {
             './_sass'
         ]
       }))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
       .pipe(gulp.dest(destination));
 });
 
@@ -59,11 +88,15 @@ gulp.task('sassComponents', function () {
             './_sass'
         ]
       }))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
       .pipe(gulp.dest(destination));
 });
 
 
-gulp.task('watch', function(){
+gulp.task('watchSass', function(){
   gulp.watch('./_sass_bass/*.scss', gulp.series('sassBass')); 
   gulp.watch('./_sass/*.scss', gulp.series('sass'));
   gulp.watch('./_includes/footer/*.scss', gulp.series('sassFooter'));  
@@ -72,6 +105,6 @@ gulp.task('watch', function(){
   
 });
 
-gulp.task('default', gulp.series('sassBass', 'sass', 'sassFooter', 'sassPages' , 'sassComponents' , 'watch', function(){
+gulp.task('default', gulp.series('sassBass', 'sass', 'sassFooter', 'sassPages' , 'sassComponents' , 'watchSass', function(){
   console.log("running tasks");
 }));
