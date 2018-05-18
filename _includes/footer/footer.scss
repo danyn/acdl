@@ -25,14 +25,24 @@
     }
 
     .footer-content{
-        background-color: inherit;
+       
         position: absolute;
         padding:0 $space-3 $space-3;
-        top:$space-3;
+        top:70px;
         z-index:999;
+        background-color: inherit;
         color:inherit;
+        width:100%;
    
     }
 
 }
-   
+
+.footer-content{
+    .footer-heading{
+        color:inherit;
+        border-top:1px solid;
+        border-bottom: 1px solid;
+        line-height: 2em;
+    }
+}

@@ -2,55 +2,25 @@
 	<div class="footer-bg">
 		{%- include footer/blue-smile.svg -%}
 	</div>	
-		<div class="footer-content p3">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla corrupti fugiat iste eveniet a, vitae eos id itaque vel, repellat et vero molestiae iure commodi, voluptates voluptatibus impedit quia dolorum?
+	<div class="footer-content clearfix">
+		<div class="sm-col sm-col-6 p2">
+			<h2 class="footer-heading">HOURS</h2>
+			{%- for item in site.data.opening_hours.days -%}
+				<p class="clearfix"><span class="col day">{{item.day}}</span> <span class="col-right hours">{{item.hours}}</span></p>
+			{%- endfor -%}
 		</div>
+		<div class="sm-col sm-col-6 p2">
+			<h2 class="footer-heading ">LOCATION</h2>
+			{%- include footer/footer-logo.html -%} 
+			
+			<p class="location">
+				{{site.data.location.streetAddress}}<br>
+				{{site.data.location.city}}, {{site.data.location.province}} <br> 
+				{{site.data.location.postalCode}} <br>
+				{%- include components/buttons/directions/button-directions.html -%}
+			</p>
+		</div>
+	</div>
 
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %} 
-
-		<div class="footer-col-wrapper">
-			<div class="footer-col footer-col-1">
-				<ul class="contact-list">
-					<li class="p-name">
-						{%- if site.author -%}
-							{{ site.author | escape }}
-						{%- else -%}
-							{{ site.title | escape }}
-						{%- endif -%}
-						</li>
-						{%- if site.email -%}
-						<li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-						{%- endif -%}
-				</ul>
-			</div>
-			<div class="footer-col footer-col-2">
-				{%- include social.html -%}
-			</div>
-
-			<div class="footer-col footer-col-3">
-				<p>{{- site.description | escape -}}</p>
-			</div>
-		</div>
-
-{% endcomment %}
