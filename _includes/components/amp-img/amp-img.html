@@ -4,12 +4,15 @@
 	width="{{include.width}}"
 	height="{{include.height}}"
 	layout="{{include.layout}}"
-	src="{{site.url}}{{site.baseurl}}{{page.permalink}}{{include.src}}">
+	src="{{site.url}}{{site.baseurl}}{%- if page.permalink  -%}{{page.permalink}}{%- elsif page.content-folder-%}{{page.content-folder}}{%-endif-%}{{include.src}}">
 </amp-img>
 
 {% comment %}
 
 include path: /_includes/components/amp-img/amp-img.html
+
+-----------------------------------------------------------
+
 parameters:
 			alt
 			media
@@ -18,7 +21,8 @@ parameters:
 			layout
 			src
 
-usage:
-	{%- include components/amp-img/amp-img.html src="" alt="" media="" width="" height="" layout=""  -%}
+------------------------------------------------------------
+
+usage: {%- include components/amp-img/amp-img.html src="" alt="" media="" width="" height="" layout=""  -%}
 
 {% endcomment %}

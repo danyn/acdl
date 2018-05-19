@@ -24,6 +24,7 @@ repository: 131331861
 repository_url: https://github.com/danyn/acdl
 url: https://danyn.github.io
 baseurl: /acdl
+permalink: /:categories/:title/
 country: CA
 lang: en
 title: Creative Dental Labs Specializes in Crowns and Bridges

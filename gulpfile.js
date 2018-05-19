@@ -7,16 +7,6 @@ var  autoprefixer = require('gulp-autoprefixer');
 
 
 
-gulp.task('default', () =>
-    gulp.src('src/app.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'))
-);
-
-
 gulp.task('sass', function () {
   return gulp.src('./_sass/*.scss')
       .pipe(sass({
@@ -66,7 +56,7 @@ gulp.task('sassFooter', function () {
 });
  
 gulp.task('sassPages', function () {
-  return gulp.src('./pages/**/**/*.scss')
+  return gulp.src(['./**/**/*.scss', '!./node_modules/**/*.*'])
       .pipe(sass({
           outputStyle: 'compressed',
           includePaths: [
@@ -100,7 +90,7 @@ gulp.task('watchSass', function(){
   gulp.watch('./_sass_bass/*.scss', gulp.series('sassBass')); 
   gulp.watch('./_sass/*.scss', gulp.series('sass'));
   gulp.watch('./_includes/footer/*.scss', gulp.series('sassFooter'));  
-  gulp.watch('./pages/**/**/*.scss', gulp.series('sassPages')); 
+  gulp.watch('./**/*.scss', gulp.series('sassPages')); 
   gulp.watch('./_includes/**/**/*.scss', gulp.series('sassComponents')); 
   
 });
