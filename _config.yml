@@ -44,15 +44,15 @@ github_username: daniel-eisen
 
 # Explicitly say which pages to include in the nav
 header_pages:
-  - pages/layouts/index.html
-  - pages/site-vars/site-vars.html
-  - pages/about/about.md
-  - pages/contact/contact.html
-  - pages/restorations/restorations.html
+  - layouts/index.html
+  - site-vars/site-vars.html
+  - about/about.md
+  - contact/contact.html
+  - restorations/restorations.html
   - dropdown: Topics
     dropdownItems:
-      - pages/topics/topic-1/index.html
-      - pages/topics/topic-2/index.html
+      - topics/topic-1/index.html
+      - topics/topic-2/index.html
 
  
  
