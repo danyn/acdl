@@ -4,18 +4,20 @@
 	<link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<style amp-custom>
-		{%- include head/css/basscss.css -%}
+		 {% comment %} {%- include head/css/basscss.css -%}
 		{%- include head/css/global.css -%}
 		{%- include head/css/navs/nav.css -%}
-		{%- include head/css/footer/footer.css -%}
+		{%- include head/css/footer/footer.css -%} {% endcomment %}
 
 
 
 		{%- if site.data.global-components -%}
+		
 			{%- for css_include in site.data.global-components.css -%}
-					{%- include {{ css_include }} -%}
+			
+				{%- include {{ css_include }} -%}
 			{%- endfor -%}	
-		{%- endif -%}
+		{%- endif -%} 
 
 
 		{%- if page.css -%}

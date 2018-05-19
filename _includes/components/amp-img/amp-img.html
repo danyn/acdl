@@ -1,0 +1,24 @@
+<amp-img
+	alt="{{include.alt}}"
+	media="{{include.media}}"
+	width="{{include.width}}"
+	height="{{include.height}}"
+	layout="{{include.layout}}"
+	src="{{site.url}}{{site.baseurl}}{{page.permalink}}{{include.src}}">
+</amp-img>
+
+{% comment %}
+
+include path: /_includes/components/amp-img/amp-img.html
+parameters:
+			alt
+			media
+			width
+			height
+			layout
+			src
+
+usage:
+	{%- include components/amp-img/amp-img.html src="" alt="" media="" width="" height="" layout=""  -%}
+
+{% endcomment %}
