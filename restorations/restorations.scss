@@ -1,9 +1,32 @@
-    body{
-        background: green;
-        p{
-            color:pink;
-        }
-        div{
-            border:3px solid olive;
-        }
+@import 'vars';
+
+.sm-col{
+    // border:1px solid red;
+}
+
+.restorations{
+    .border-top{
+        border-top: 1px solid grey;
+        padding:$space-2 0;
+
     }
+
+    .corporate-logo{
+        max-width:380px;
+        margin:0 auto;
+    }
+    
+    .restoration-photo{
+        max-width:525px;
+        margin: 0 auto;;
+    }
+
+    p, ul{
+        line-height:1.9;
+    }
+
+}
+
+
+
+

@@ -6,39 +6,74 @@ social_image: ""
 type: page
 rel: services
 css: restorations/restorations.css
+page_css_class: restorations
 in_page_nav: crowns, ceramic, full-cast, implants
 # nav: navs/nav-unified.html
 
 ---
-<!-- product.title = "Awesome Shoes" -->
-
-
-<h2 id="crowns">{{ 'Porcelain-Fused-To-Metal' | replace: '-', ' ' }}</h2>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
-</div>
-<div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
+<div class="clearfix pt2">
+    <h2 id="crowns" class="center py1">{{ 'Porcelain-Fused-To-Metal' | replace: '-', ' ' }}</h2>
+    <div class="lg-col lg-col-6 p2">
+        <p>Creative’s porcelain-fused-metal crowns are fabricated using the most advances materials available. Our technicians
+            are trained to focus special attention on proper tooth morphology, while care is taken at every phase to ensure
+            consistency. Dies are trimmed and margins are finished under 10x magnification. Many castings are created using
+            induction casting, and final Quality Control is done using magnification by our most experienced technician.</p>
     </div>
-
-<h2 id="ceramic">{{ 'All-Ceramic' | replace: '-', ' ' }}</h2>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
-</div>
-<div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
+    <div class="lg-col lg-col-6 p2">
+        <h3>PFM Advantages / Benefits</h3>
+        <ul class="small-card">
+            <li>Longevity:25 yrs</li>
+            <li>Natural looking internal characteristics</li>
+            <li>Enhanced aesthetics</li>
+            <li>Long-span bridges</li>
+            <li>Perfect for combination cases with removable elements</li>
+            <li>In Lab Turn Around Time is 5 Working Days</li>
+        </ul>
     </div>
+</div><!-- #crowns -->
 
-<h2 id="full-cast">{{ 'Full-Cast' | replace: '-', ' ' }}</h2>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
-</div>
-<div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
+<div class="clearfix border-top">
+    <h2 id="ceramic" class="center">{{ 'All-Ceramic' | replace: '-', ' ' }}</h2>
+    <div class="lg-col lg-col-6 p2">
+        {%- include components/amp-img/amp-img.html class="restoration-photo" media="(min-width:64em)" src="all-ceramic.jpg" alt="ceramic implants" width="524" height="400" layout="responsive"-%}
     </div>
+    <div class="lg-col lg-col-6 p2">
+        <div class="small-card">
+            <p >All ceramic restorations are the perfect choice to restore the natural beauty and strength of teeth. We offer a variety
+                of choices for all ceramic crowns, inlays, onlays, veneers, and bridges. All ceramic restorations are known for
+                their translucency, brightness, and light scattering properties. Contact one of our qualified technical specialists
+                today for more information on our all ceramic capabilities.</p>
+            {%- include components/amp-img/amp-img.html class="corporate-logo" media="(min-width:64em)" src="ips.jpg" alt="ceramic implants" width="380" height="115" layout="responsive"-%}
+        </div>
+    </div>
+</div><!-- #ceramic -->
 
-<h2 id="implants">{{ 'Implants' | replace: '-', ' ' }}</h2>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, ipsam similique officiis omnis cumque autem beatae et sint porro itaque fugit pariatur animi? Ab culpa reiciendis deserunt, impedit est earum.</p>
-</div>
+<div class="clearfix border-top">
+    <h2 id="full-cast" class="center">{{ 'Full-Cast' | replace: '-', ' ' }}</h2>
+    <div class="lg-col lg-col-6 p2">
+        <p>While full cast crowns and bridges offer a variety of metal options, gold is still the preferred choice for many
+            doctors because of its durability, function, and marginal integrity. The gold technicians at Creative Dental
+            Laboratories are specially trained in all aspects of tooth form and function. We offer gold content options from
+            52% to 96% and type II to type IV, depending on the requirements of each particular situation. We also offer
+            white semi precious restorations. Our gold technicians will ensure that every restoration meets the highest quality
+            standard you expect.
+        </p>
+    </div>
+    <div class="lg-col lg-col-6 p2">
+        {%- include components/amp-img/amp-img.html class="restoration-photo" media="(min-width:64em)" src="gold-tooth.jpg" alt="ceramic implants" width="524" height="400" layout="responsive"-%}
+    </div>
+</div><!-- #full-cast -->
 
+<div class="clearfix border-top">
+    <h2 id="implants" class="center p2">{{ 'Implants' | replace: '-', ' ' }}</h2>
+    <p>Oral implantology remains one of the most dynamic fields within dentistry. This is due in large to the development of
+        safe, effective implant systems. We produce implant based crown & bridge using both Nobel Biocare and Straumann systems.
+        By using both metal and zirconia abutments we are able to consistently produce high quality restorations with excellent
+        aesthetics that match the original dentition. Fixed and screw retained single or bridge restorations.</p>
+    <div class="lg-col lg-col-6 p2">
+        {%- include components/amp-img/amp-img.html class="corporate-logo" src="strauman.jpg" alt="ceramic implants" width="380" height="115" layout="responsive" -%}
+    </div>
+    <div class="lg-col lg-col-6 p2">
+        {%- include components/amp-img/amp-img.html class="corporate-logo" src="nobel-biocare.jpg" alt="ceramic implants" width="380" height="115" layout="responsive" -%}
+    </div>
+</div><!-- #implants -->
