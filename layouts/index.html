@@ -37,6 +37,7 @@ css: layouts/layouts.css
         {%- include components/amp-img/amp-img.html src="ips.jpg" alt="nice ips dude man" width="380" height="115" layout="responsive"  -%}
 </div>
 
+
 <!--
 alt
 media
@@ -45,3 +46,43 @@ height
 layout
 src
  -->
+
+ <!-- animation   https://ampbyexample.com/visual_effects/basics_of_scrollbound_effects/ -->
+<div class="spacer">
+    The Fidet spinner
+</div>
+ <div class="fidget-spinner-scene">
+
+    <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)"
+      intersection-ratios="1"
+      layout="nodisplay">
+    </amp-position-observer>
+  <div class="spinner">
+    <amp-img id="fidgetSpinnerImage"
+      width="1024"
+      height="1114"
+      layout="responsive"
+      src="fidget.png"
+      alt="Picture of a fidget spinner"></amp-img>
+ </div>
+
+</div>
+<amp-animation id="spinAnimation"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "1",
+      "fill": "both",
+      "direction": "reverse",
+      "animations": [{
+        "selector": "#fidgetSpinnerImage",
+        "keyframes": [{
+          "transform": "rotate(360deg)"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+<div class="spacer"></div>
+
+<!--end animation -->
