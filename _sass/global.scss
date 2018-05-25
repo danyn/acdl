@@ -1,3 +1,4 @@
+@import 'vars';
 // global
 
 // global layout
@@ -43,7 +44,17 @@ $a-tags-hover: 'a:active, a:hover';
   }
 
 
-// color schemes
+// drop shadows
+
+.drop-shadow{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+.one-edge-shadow {
+    height: 20px;
+    box-shadow: 0 8px 6px -7px rgba(0,0,0,0.4);
+  }
+
+// borders 
 
 .light-border{
     border-color: rgb(241, 241, 241);
@@ -51,6 +62,8 @@ $a-tags-hover: 'a:active, a:hover';
 .light-background{
     background-color: rgb(250, 250, 250);
 }
+
+
 
 
 // layout

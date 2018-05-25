@@ -9,10 +9,9 @@ css: restorations/restorations.css
 page_css_class: restorations
 in_page_nav: crowns, ceramic, full-cast, implants
 # nav: navs/nav-unified.html
-
 ---
-<div class="clearfix pt2">
-    <h2 id="crowns" class="center py1">{{ 'Porcelain-Fused-To-Metal' | replace: '-', ' ' }}</h2>
+<div class="clearfix section section-first">
+    <h2 id="crowns" class="center p2">{{ 'Porcelain-Fused-To-Metal' | replace: '-', ' ' }}</h2>
     <div class="lg-col lg-col-6 p2">
         <p>Creative’s porcelain-fused-metal crowns are fabricated using the most advances materials available. Our technicians
             are trained to focus special attention on proper tooth morphology, while care is taken at every phase to ensure
@@ -21,7 +20,7 @@ in_page_nav: crowns, ceramic, full-cast, implants
     </div>
     <div class="lg-col lg-col-6 p2">
         <h3>PFM Advantages / Benefits</h3>
-        <ul class="small-card">
+        <ul>
             <li>Longevity:25 yrs</li>
             <li>Natural looking internal characteristics</li>
             <li>Enhanced aesthetics</li>
@@ -32,29 +31,28 @@ in_page_nav: crowns, ceramic, full-cast, implants
     </div>
 </div><!-- #crowns -->
 
-<div class="clearfix border-top">
-    <h2 id="ceramic" class="center">{{ 'All-Ceramic' | replace: '-', ' ' }}</h2>
+<div class="one-edge-shadow"></div>
+
+<div class="clearfix section">
+    <h2 id="ceramic" class="center p2">{{ 'All-Ceramic' | replace: '-', ' ' }}</h2>
     <div class="lg-col lg-col-6 p2">
         {%- include components/amp-img/amp-img.html class="restoration-photo" media="(min-width:64em)" src="all-ceramic.jpg" alt="ceramic implants" width="524" height="400" layout="responsive"-%}
     </div>
     <div class="lg-col lg-col-6 p2">
-        <amp-position-observer
-            on="scroll:group2.seekTo(percent=event.percent)"
-            intersection-ratios="1"
-            layout="nodisplay">
-        </amp-position-observer>
-        <div class="small-card">
+        <div>
             <p >All ceramic restorations are the perfect choice to restore the natural beauty and strength of teeth. We offer a variety
                 of choices for all ceramic crowns, inlays, onlays, veneers, and bridges. All ceramic restorations are known for
                 their translucency, brightness, and light scattering properties. Contact one of our qualified technical specialists
                 today for more information on our all ceramic capabilities.</p>
-            {%- include components/amp-img/amp-img.html class="corporate-logo fade1" media="(min-width:64em)" src="ips.jpg" alt="ceramic implants" width="380" height="115" layout="responsive"-%}
+            {%- include components/amp-img/amp-img.html class="corporate-logo ips" media="(min-width:64em)" src="ips.jpg" alt="ceramic implants" width="380" height="115" layout="responsive"-%}
         </div>
     </div>
 </div><!-- #ceramic -->
 
-<div class="clearfix border-top">
-    <h2 id="full-cast" class="center">{{ 'Full-Cast' | replace: '-', ' ' }}</h2>
+<div class="one-edge-shadow"></div>
+
+<div class="clearfix section">
+    <h2 id="full-cast" class="center p2">{{ 'Full-Cast' | replace: '-', ' ' }}</h2>
     <div class="lg-col lg-col-6 p2">
         <p>While full cast crowns and bridges offer a variety of metal options, gold is still the preferred choice for many
             doctors because of its durability, function, and marginal integrity. The gold technicians at Creative Dental
@@ -69,9 +67,12 @@ in_page_nav: crowns, ceramic, full-cast, implants
     </div>
 </div><!-- #full-cast -->
 
-<div class="clearfix border-top">
+<div class="one-edge-shadow"></div>
+
+<div class="clearfix section">
+   
     <amp-position-observer
-        on="enter:group1.start"
+        on="enter:animatedCorporateLogo.start"
         intersection-ratios="0.5"
         layout="nodisplay">
     </amp-position-observer>
@@ -89,10 +90,11 @@ in_page_nav: crowns, ceramic, full-cast, implants
     </div>
 </div><!-- #implants -->
 
+<!-- end content start animation data -->
+
 <amp-animation id="fadeTransition" layout="nodisplay">
         <script type="application/json">
             {
-            
             "fill": "both",
             "animations": [{
                 "keyframes": "fadeIn"
@@ -100,24 +102,12 @@ in_page_nav: crowns, ceramic, full-cast, implants
             }
         </script>
 </amp-animation>
-<amp-animation id="group1" layout="nodisplay">
+<amp-animation id="animatedCorporateLogo" layout="nodisplay">
         <script type="application/json">
             {
             "selector":".fade",
             "animation": "fadeTransition",
-            "duration":"3s"
-            
-            }
-        </script>
-</amp-animation>
-<amp-animation id="group2" layout="nodisplay">
-        <script type="application/json">
-            {
-            "selector":".fade1",
-            "animation": "fadeTransition",
-            "duration":"1"
-      
-            
+            "duration":"1.3s"
             }
         </script>
 </amp-animation>
