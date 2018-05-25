@@ -54,7 +54,10 @@ header_pages:
       - topics/topic-1/index.html
       - topics/topic-2/index.html
 
- 
+#define that are globals basically any components that appear accross all pages
+# amps_components:
+amp-sidebar: yes
+amp-accordion: yes
  
 
 

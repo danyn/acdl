@@ -4,6 +4,11 @@ title: Site Variables
 permalink: /site-vars/
 type: page
 schema: debug
+
+# amps_components:
+amp-sidebar: yes
+amp-accordion: yes
+
 ---
 
 <style>
@@ -76,4 +81,9 @@ Path my_page.url | relative_url: {{ my_page.url | relative_url }}
 
 <div>
    {{ site.data.global-components}}
+</div>
+
+<div>
+    page.amp-accordian : {{ page.amp-accordion }}
+    page.amp-sidebar: {% if page.amp-sidebar %} show amp-sidebar {%endif%}
 </div>
