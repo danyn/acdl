@@ -14,7 +14,7 @@
                 {% if path.dropdown %}
                   <li class="">
                           <header>{{ path.dropdown | escape }}</header>
-                          <ul>
+                          <ul class="shadow-x">
                             {% for dropdownItem in path.dropdownItems %}
                               {%- assign my_page = site.pages | where: "path", dropdownItem | first -%}
                               <li class="">
@@ -29,7 +29,7 @@
                       {% assign page_navs = my_page.in_page_nav| split: ', ' %}
                       <li class="">
                                 <header>{{ my_page.title | escape }}</header>
-                                <ul class="">
+                                <ul class="shadow-x">
                     
                         {% for page_nav in page_navs %}
                                   <li class="">

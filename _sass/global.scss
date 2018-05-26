@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'box-shadow';
 // global
 
 // global layout
@@ -43,17 +44,6 @@ $a-tags-hover: 'a:active, a:hover';
     color:rgb(48, 48, 48);
   }
 
-
-// drop shadows: https://css-tricks.com/almanac/properties/b/box-shadow/ 
-// make effects into partials add groups of effects
-
-.box-shadow{
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
-}
-.one-edge-shadow {
-    height: 20px;
-    box-shadow: 0 8px 6px -7px rgba(0,0,0,0.4);
-  }
 
 // borders 
 

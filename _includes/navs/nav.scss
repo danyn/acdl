@@ -3,36 +3,66 @@
     position: relative;
     z-index:999;
 }
+// global styles of the menu
 .main-menu{
-
     text-align:center;
+    // top level list
+    >ul{
+        display:inline-block;
+        li:hover header{
+            color:black;
+        }
+    }
+    // all  link like display items
     a, header{
         display:block;
         padding:1em;
-
-
+        cursor: pointer;
+        color:grey;
+        &:hover{
+            color:black;
+        }
     }
-    header::after{
-        content:"\25BC";
-        display:inline-block;
-        font-size:0.6em;
-        padding-left:0.3em;
-        
-    }
+    
+
+    // all ul
     ul{
         list-style-type: none;
         margin:0;
         padding:0;
     }
-    >ul{
-        display:inline-block;
-        }
+ 
+
+}
+
+// targeted styles of the menu
+.main-menu{
+    // top level menu items    
     >ul>li{
         float:left;
-    }
-
-
-    >ul>li>ul{
-        display:none;
-    }
+        position:relative;
+         // first level submenu
+        >ul{
+            display:none;
+            position:absolute;
+            top:100%;
+            left:0;
+            min-width:200px;
+            text-align:left;
+            background:rgba(255,255,255,1);
+        }
+        &:hover > ul {
+            // toggle visibility of first level submenu
+            display:block;
+        }
+         // top level dropdown heading
+        header{  
+            &::after{
+                    content:"\25BC";
+                    display:inline-block;
+                    font-size:0.6em;
+                    padding-left:0.3em;         
+            }
+        }
+    }//top level meny items >ul>li 
 }
