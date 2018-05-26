@@ -43,16 +43,24 @@ twitter_username: twitterMan
 github_username: daniel-eisen
 
 # Explicitly say which pages to include in the nav
+# header_pages:
+#   - layouts/index.html
+#   - site-vars/site-vars.html
+#   - about/about.md
+#   - contact/contact.html
+#   - restorations/restorations.html
+#   - dropdown: Topics
+#     dropdownItems:
+#       - topics/topic-1/index.html
+#       - topics/topic-2/index.html
+
+
 header_pages:
-  - layouts/index.html
-  - site-vars/site-vars.html
+  - index.html
   - about/about.md
   - contact/contact.html
   - restorations/restorations.html
-  - dropdown: Topics
-    dropdownItems:
-      - topics/topic-1/index.html
-      - topics/topic-2/index.html
+
 
 #define that are globals basically any components that appear accross all pages
 # amps_components:
