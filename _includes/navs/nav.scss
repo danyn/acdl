@@ -23,6 +23,9 @@
             color:black;
         }
     }
+    header{
+        cursor: s-resize;
+    }
     
 
     // all ul
@@ -50,7 +53,7 @@
             min-width:200px;
             text-align:left;
             background:rgba(255,255,255,1);
-        }
+        }// >ul
         &:hover > ul {
             // toggle visibility of first level submenu
             display:block;

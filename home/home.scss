@@ -59,6 +59,7 @@
 		margin:0 auto;
 		@media(min-width:761px){
 			display:flex;
+			flex-wrap: wrap;
 		}
 		div{
 			color:white;

@@ -9,37 +9,34 @@
         <!-- <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div> -->
 {%- if page_paths -%}
         <nav class="main-menu clearfix">
-            <ul  class="">
+            <ul>
               {%- for path in page_paths -%}
                 {% if path.dropdown %}
-                  <li class="">
-                          <header>{{ path.dropdown | escape }}</header>
-                          <ul class="shadow-x">
-                            {% for dropdownItem in path.dropdownItems %}
-                              {%- assign my_page = site.pages | where: "path", dropdownItem | first -%}
-                              <li class="">
-                                  <a href="{{ my_page.url | relative_url }}" class="text-decoration-none">{{ my_page.title | escape }}</a>
-                              </li>
-                            {% endfor %}
-                          </ul>  
+                  <li>
+                    <header aria-haspopup="true">{{ path.dropdown | escape }}</header>
+                    <ul class="shadow-x">
+                      {% for dropdownItem in path.dropdownItems %}
+                        {%- assign my_page = site.pages | where: "path", dropdownItem | first -%}
+                        <li class="">
+                            <a href="{{ my_page.url | relative_url }}" class="text-decoration-none">{{ my_page.title | escape }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>    
                   {% else %}
                   {%- assign my_page = site.pages | where: "path", path | first -%}
                   {%- if my_page.title -%}
                     {%- if my_page.in_page_nav -%}
                       {% assign page_navs = my_page.in_page_nav| split: ', ' %}
-                      <li class="">
-                                <header>{{ my_page.title | escape }}</header>
-                                <ul class="shadow-x">
-                    
+                      <li>
+                          <header aria-haspopup="true">{{ my_page.title | escape }}</header>
+                          <ul class="shadow-x">
                         {% for page_nav in page_navs %}
-                                  <li class="">
-                                    <a href="{{ my_page.url | relative_url }}#{{page_nav}}" class=""> {{ page_nav | replace: '-', ' '  }}</a>
-                                  </li>
-                          
+                            <li class="">
+                              <a href="{{ my_page.url | relative_url }}#{{page_nav}}" class=""> {{ page_nav | replace: '-', ' '  }}</a>
+                            </li>
                         {% endfor %}
-                                </ul>
-                              </section>
-                            </amp-accordion>
+                          </ul>
                       </li>
                   {%- else -%}
                   <li class="">
@@ -52,7 +49,7 @@
             </ul >
         </nav>
 {%- endif -%}
-</div>
+</div><!-- .nav-wraper -->
 
 {% if site.debug  %}
   <h3>template: nav-default.html</h3>
