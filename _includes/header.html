@@ -10,8 +10,10 @@
 
 </header>
 
+{%- if site.sidebar -%}
+  {%- include navs/sidebar.html-%}
+{%- endif -%}   
 
 {% if site.debug %}
   <h3>header.html -- page.nav: {{page.nav}} site.nav: {{site.nav}}</h3>
 {% endif %}
-<!-- http://basscss.com/v7/docs/guides/layout/ -->

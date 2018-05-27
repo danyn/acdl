@@ -6,7 +6,7 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 
 <div class="nav-wrapper box-shadow">
-        <!-- <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div> -->
+        <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="sidebar-trigger">NAVIGATION☰</div>
 {%- if page_paths -%}
         <nav class="main-menu clearfix">
             <ul>
@@ -50,6 +50,8 @@
         </nav>
 {%- endif -%}
 </div><!-- .nav-wraper -->
+
+
 
 {% if site.debug  %}
   <h3>template: nav-default.html</h3>
