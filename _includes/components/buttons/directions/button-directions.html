@@ -14,6 +14,11 @@ https://developers.google.com/places/place-id
 destination={{ destination | url_encode }}&destination_place_id={{site.data.location.placeId}}
 {%- endcapture -%}
 
-<div class="directions-wrapper table">
+<div class="btn-dir directions-wrapper table">
     <a class="directions-link table-cell align-middle" target="_blank" href="https://www.google.com/maps/dir/?api=1&{{parameters}}">Get Directions</a>
 </div> 
+
+{% comment %} 
+usage:
+{%- include  components/buttons/directions/button-directions.html  -%}
+{% endcomment %}
