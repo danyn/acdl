@@ -1,28 +1,56 @@
+
+
 <!-- Start Sidebar -->
 <amp-sidebar id="header-sidebar" class="" layout="nodisplay">
   <div class="toggle-wrapper clearfix">
     <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="toggle-sidebar">✕</div>
   </div>
+{%- if page_paths -%}
+  
   <nav class="sidebar-nav">
     <ul>
+  {%- for path in page_paths -%}      
+    {% if path.dropdown %}      
       <li class="relative">
 <!-- Start Dropdown-inline -->
         <amp-accordion layout="container" disable-session-states="" class="sidebar-dropdown">
           <section>
-            <header>Fashion</header>
-            <ul class="sidebar-dropdown-items list-reset m0 p0">
-                <li class=""><a href="#" class="text-decoration-none">Styling Tips</a></li>
-                <li class=""><a href="#" class="text-decoration-none">Designers</a></li>
+            <header aria-haspopup="true">{{ path.dropdown | escape }}</header>
+            <ul class="sidebar-dropdown-items">
+            {% for dropdownItem in path.dropdownItems %}
+            {%- assign my_page = site.pages | where: "path", dropdownItem | first -%}
+              <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+            {% endfor %}  
             </ul>
           </section>
         </amp-accordion>
-<!-- End Dropdown-inline -->
       </li>
-      <li class="ampstart-nav-item"><a href="#">Travel</a></li>
-      <li class="ampstart-nav-item"><a href="#">Beauty</a></li>
-      <li class="ampstart-nav-item"><a href="#">Shop</a></li>
-    </ul>
-  </nav>
+<!-- End Dropdown-inline -->
+      
+      {% else %}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page.in_page_nav -%}
+            {% assign page_navs = my_page.in_page_nav| split: ', ' %}
+            <li>
+            <amp-accordion layout="container" disable-session-states="" class="sidebar-dropdown">
+              <section>
+                <header aria-haspopup="true">{{ my_page.title | escape }}</header>
+                <ul class="sidebar-dropdown-items">
+            {% for page_nav in page_navs %}
+              <li><a href="{{ my_page.url | relative_url }}#{{page_nav}}">{{ page_nav | replace: '-', ' '  }}</a></li>
+            {% endfor %}
+                </ul>
+               </section> 
+            </li>
+            {%- else -%}
+            <li>
+                <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </nav><!-- nav.sidebar-nav -->
+  {%- endif -%}
  
   <ul class="sidebar-social-links">
     <li class="mr2">
