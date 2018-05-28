@@ -58,7 +58,7 @@ github_username: daniel-eisen
 
 header_pages:
   - index.html
-  - about/about.md
+  - about/about.html
   - contact/contact.html
   - restorations/restorations.html
 

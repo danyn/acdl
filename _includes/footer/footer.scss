@@ -36,6 +36,9 @@
    
     }
 
+    .btn-dir{
+        margin:$space-1 0;
+    }
 }
 
 .footer-content{
@@ -45,4 +48,9 @@
         border-bottom: 1px solid;
         line-height: 2em;
     }
+}
+.footer-logo{
+    position:relative;
+    left:-29px;
+    margin:$space-1 0;
 }
