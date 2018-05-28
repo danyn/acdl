@@ -63,3 +63,18 @@ $a-tags-hover: 'a:active, a:hover';
     max-width: 400px;
     width:60%;
 }
+
+.reading-width{
+    max-width:950px;
+    margin:0 auto;
+    p{
+        margin-bottom:1em;
+        text-indent:0.6em;
+        line-height:1.5em;
+    }
+    .supplemental{
+        text-indent: 0;
+        font-size: 0.8em;
+        font-style:italic;
+    }
+}

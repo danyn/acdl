@@ -1,7 +1,72 @@
-body{
-	background: gold;
-	color:white;
-	p{
-		border:3px solid;
+
+@import 'vars';
+
+.form-wrapper{
+	border: 1px solid rgb(236, 236, 236);
+	max-width:900px;
+	padding: $space-2;
+	margin:$space-2 auto;
+
+	.response-message{
+		text-align: center;
+		
+		padding: $space-2;
+		.status{
+			padding: $space-2;
+			color:white;
+			display:inline-block;
+			&.initial{
+				background: transparent;
+			}
+			&.success{
+				background: $light_green;
+			}
+		}
+		
+	}
+
+	.contact-form{
+		
+		.input-group{
+			padding: $space-1;
+		}
+		.text-fields{
+			input{
+				border: 1px solid #d6d1d1;
+				background-color:#f1f0f0;
+				width:100%;
+				margin:0 auto;
+				line-height:2em;
+			}
+			label{
+				display:block;
+			}
+		}
+		
+		.radio-input{
+			label, input{
+				display:inline-block;
+				vertical-align: middle;
+				padding: 3px;
+			}
+			
+		
+		}
+		input[type="submit"]{
+			padding:$space-2;
+			min-width: 200px;
+			text-align: center;
+			color:white;
+			background:$light_blue;
+			border:none;
+			border-radius: 6px;
+
+		}
+	}
+}
+
+.info{;
+	h2{
+		color: $logo-blue;
 	}
 }

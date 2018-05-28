@@ -7,7 +7,102 @@ type: page
 rel: contact
 css: contact/contact.css
 # nav: navs/nav-sidebar.html
+#add amps components required for this page if they are not global ones in config.yml
+amp-form: yes
+#amp-lightbox: yes
+amp-bind: yes
+
 ---
+<div class="form-wrapper">
+<div class="response-message">
+        <div class="form-heading">
+            <h2 class="form_title">Get In Touch With Us</h2>
+            <span class="form_description">Creative Dental Restoration Lab</span>
+        </div>
+     <div [text]="formResponseText" class="status initial" [class]="formResponseClass"></div>
+</div>
+<form
+    on="submit:AMP.setState(
+    {
+        formResponseText: 'Thanks for getting in touch. We will respond shortly.',
+        formResponseClass: 'status success' 
+    })"
+    method="post"
+    action-xhr="https://getsimpleform.com/messages?form_api_token=abac523731b58d63c283659fad638c15"
+    target="_top"
+    class="contact-form"
+    >
+    
+     <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+   
+    <!-- all your input fields here.... -->
+    
+    <div class="contact-name text-fields clearfix">
+        <div class="input-group md-col md-col-6">
+            <input type="text" name="First_Name" id="firstName" value="" aria-label="First name" tabindex="2" aria-invalid="false">
+            <label for="firstName">First</label>
+        </div><!-- first name -->
 
+        <div class="input-group md-col md-col-6">
+            <input type="text" name="Last_Name" id="lastName" value="" aria-label="Last name" tabindex="4" aria-invalid="false">
+            <label for="lastName">Last</label>
+        </div><!-- last name -->
+    </div><!-- contact-name -->
 
-<h2>Please Contact Us... We love to be contacted.</h2>
+    <div class="contact-address text-fields clearfix">
+        <div class="input-group md-col md-col-6">
+            <input type="email" name="Email_Address" id="emailAddress" value="" aria-label="Email address" tabindex="2" aria-invalid="false">
+            <label for="emailAddress">Email address</label>
+        </div><!-- Email address -->
+
+        <div class="input-group md-col md-col-6">
+            <input type="tel" name="TelephoneNumber" id="telephoneNumber" value="" aria-label="Telephone number" tabindex="4" aria-invalid="false">
+            <label for="telephoneNumber">Telephone number</label>
+        </div><!-- telephone number -->
+    </div><!-- contact-address -->
+  
+    <div class="details clearfix">
+
+        <ul class="radio-input list-reset input-group md-col md-col-6">
+            <li>
+                <input name="Restoration_Type" type="radio" value="Porcelain Fused To Metal" id="porcelainFusedToMetal" tabindex="8">
+                <label for="porcelainFusedToMetal">Porcelain fused to metal</label>
+            </li>
+            <li>
+                <input name="Restoration_Type" type="radio" value="Porcelain" id="porcelain" tabindex="9">
+                <label for="porcelain">Porcelain</label>
+            </li>
+            <li>
+                <input name="Restoration_Type" type="radio" value="Gold" id="gold" tabindex="10">
+                <label for="gold">Gold</label>
+            </li>
+        </ul>
+
+        <ul class="radio-input list-reset input-group md-col md-col-6">
+            <li>
+               
+                <input name="Occlusion" type="radio" value="Metal" id="metal" tabindex="11">
+                <label for="metal">Metal</label>
+            </li>
+            <li>
+               
+                <input name="Occlusion" type="radio" value="Porcelain" id="porcelain" tabindex="12">
+                <label for="porcelain">Porcelain</label>
+            </li>
+        </ul>
+    </div><!-- detials -->
+  
+    <input type='submit' value='Submit' />
+  </form>
+
+ 
+</div>
+
+<div class="one-edge-shadow"></div>        
+
+  <div class="info py3 reading-width">
+    <h2 class="center">SPECIALIZING IN CROWN AND BRIDGE RESTORATION</h2>
+    <p class="p2">
+    Count on the well-trained technicians at Creative Dental in Victoria to use high-quality materials and up-to-date technology to provide your patients with consistent dental restorations. Specializing in crown and bridge restoration, we’re dedicated to giving your patients a reason to love their smile again. Along with using Nobel Biocare® and Straumann systems to deliver excellent implant-based crown and bridge work, we also offer impressive gold and semi-precious restorations and ceramic restorations.
+    </p>
+  </div>
